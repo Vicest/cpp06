@@ -6,7 +6,7 @@
 /*   By: vicmarti <vicmarti@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/19 18:19:47 by vicmarti          #+#    #+#             */
-/*   Updated: 2022/02/21 23:29:26 by vicmarti         ###   ########.fr       */
+/*   Updated: 2022/02/21 23:30:34 by vicmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,13 @@ int main(int argc, char **argv)
 	conv = StringConverter(argv[1]);
 	std::cout << std::fixed;
 	if (conv.charOvfl())
-		std::cout << "Character: " << "immpossible" << std::endl;
+		std::cout << "Character: " << "impossible" << std::endl;
 	else if (!isprint(static_cast<char>(conv)))
 		std::cout << "Character: " << "Non printable" << std::endl;
 	else
 		std::cout << "Character: '" << static_cast<char>(conv) << "'" << std::endl;
 	if (conv.intOvfl())
-		std::cout << "Integer:   " << "immpossible" << std::endl;
+		std::cout << "Integer:   " << "impossible" << std::endl;
 	else
 		std::cout << "Integer:   " << static_cast<int>(conv) << std::endl;
 	if (static_cast<float>(conv) == static_cast<int>(conv))
