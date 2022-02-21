@@ -6,7 +6,7 @@
 /*   By: vicmarti <vicmarti@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 17:09:01 by vicmarti          #+#    #+#             */
-/*   Updated: 2022/02/20 20:36:38 by vicmarti         ###   ########.fr       */
+/*   Updated: 2022/02/21 23:08:10 by vicmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,22 +22,23 @@ class StringConverter
 		virtual ~StringConverter(void);
 		StringConverter	&operator=(StringConverter const &stringconverter);
 
+		bool	charOvfl(void);
+		bool	intOvfl(void);
 		operator double();
-		//operator float();
-		//operator int();
-		//operator char();
+		operator float();
+		operator int();
+		operator char();
 
 
 	private:
-		char const	*_raw;
-		int		_type;
 		double	_d;
 		float	_f;
 		int		_i;
 		char	_c;
+		char	_overflows;
 
 		StringConverter(void);
-		int	getType(char const *s);
+		bool	isLiteral(char const *s) const;
 };
 #endif
 
