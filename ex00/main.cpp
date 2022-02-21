@@ -6,7 +6,7 @@
 /*   By: vicmarti <vicmarti@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/19 18:19:47 by vicmarti          #+#    #+#             */
-/*   Updated: 2022/02/21 23:25:15 by vicmarti         ###   ########.fr       */
+/*   Updated: 2022/02/21 23:29:26 by vicmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int main(int argc, char **argv)
 	if (static_cast<float>(conv) == static_cast<int>(conv))
 		std::cout << "Float:     " << static_cast<float>(conv) << ".0f" << std::endl;
 	else
-		std::cout << "Float:     " << static_cast<float>(conv) << std::endl;
+		std::cout << "Float:     " << static_cast<float>(conv) << "f" << std::endl;
 	if (static_cast<double>(conv) == static_cast<int>(conv))
 		std::cout << "Double:    " << static_cast<double>(conv) << ".0" << std::endl;
 	else
